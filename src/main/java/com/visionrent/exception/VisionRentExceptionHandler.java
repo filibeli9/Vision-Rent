@@ -3,6 +3,8 @@ package com.visionrent.exception;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.security.sasl.AuthenticationException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.ConversionNotSupportedException;
@@ -11,6 +13,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -41,7 +44,7 @@ public class VisionRentExceptionHandler extends ResponseEntityExceptionHandler {
 		ApiResponseError error = new ApiResponseError(HttpStatus.NOT_FOUND, ex.getMessage(),
 				request.getDescription(false));
 
-		/*
+		/*old version
 		 * Map«String,String> map= new HashMap<>(); map.put("time", LocalDate
 		 * Time.now().toString()); map.put("message", ex.getMessage); return new
 		 * ResponseEntity<>(map,HttpStatus.CREATED);
@@ -92,6 +95,31 @@ public class VisionRentExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(ConflictException.class)
 	protected ResponseEntity<Object> handleConflictException(ConflictException ex, WebRequest request){
 		ApiResponseError error = new ApiResponseError(HttpStatus.CONFLICT, ex.getMessage(),
+				request.getDescription(false));
+
+		return buildResponseEntity(error);
+	}
+	
+	//  to handle security related exceptions
+	@ExceptionHandler(AccessDeniedException.class)
+	protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex, WebRequest request){
+		ApiResponseError error = new ApiResponseError(HttpStatus.FORBIDDEN, ex.getMessage(),
+				request.getDescription(false));
+
+		return buildResponseEntity(error);
+	}
+	
+	@ExceptionHandler(AuthenticationException.class)
+	protected ResponseEntity<Object> handleAuthenticationException(AuthenticationException ex, WebRequest request){
+		ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(),
+				request.getDescription(false));
+
+		return buildResponseEntity(error);
+	}
+	
+	@ExceptionHandler(BadRequestException.class)
+	protected ResponseEntity<Object> handleBadRequestException(BadRequestException ex, WebRequest request){
+		ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(),
 				request.getDescription(false));
 
 		return buildResponseEntity(error);
