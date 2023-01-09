@@ -71,8 +71,11 @@ public class ContactMessageController {
 
 	@GetMapping("/pages")
 	public ResponseEntity<Page<ContactMessageDTO>> getAllContactMessageWithPage(@RequestParam("page") int page,
-			@RequestParam("size") int size, @RequestParam("sort") String prop, // to sort by what
-			@RequestParam(value = "direction", required = false, defaultValue = "DESC") Direction direction) {
+																				@RequestParam("size") int size, 
+																				@RequestParam("sort") String prop, // to sort by what
+																				@RequestParam(value = "direction", 
+																				required = false, 
+																				defaultValue = "DESC") Direction direction) {
 		Pageable pageable = PageRequest.of(page, size, Sort.by(direction, prop));
 		Page<ContactMessage> contactMessagePage = contactMessageService.getAll(pageable);
 		// ContactMessage --> ContactMessageDTO

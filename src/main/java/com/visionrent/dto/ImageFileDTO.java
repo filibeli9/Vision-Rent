@@ -12,7 +12,7 @@ import lombok.Setter;
 public class ImageFileDTO {
 
 	private String name;
-	private String uri;
+	private String url;
 	private String type;
 	private long size;//length
 }

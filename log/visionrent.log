@@ -1,25 +1,33 @@
-2023-01-01 10:19:14,324 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 5965 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
-2023-01-01 10:19:14,339 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
-2023-01-01 10:19:14,395 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-01 10:19:14,396 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-01 10:19:15,497 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-01 10:19:15,626 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 122 ms. Found 3 JPA repository interfaces.
-2023-01-01 10:19:16,317 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-2023-01-01 10:19:16,326 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-2023-01-01 10:19:16,326 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-01 10:19:16,385 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-2023-01-01 10:19:16,388 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1991 ms
-2023-01-01 10:19:16,665 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-01 10:19:16,693 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-01-01 10:19:16,799 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-01 10:19:16,864 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-2023-01-01 10:19:16,986 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-2023-01-01 10:19:17,000 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-01 10:19:17,708 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-01-01 10:19:17,715 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:19:18,022 ERROR [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatStarter:Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/Users/g/Desktop/Projects/visionrent/target/classes/com/visionrent/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.visionrent.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-2023-01-01 10:19:18,045 INFO  [restartedMain] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
-2023-01-01 10:19:18,049 WARN  [restartedMain] org.apache.catalina.loader.WebappClassLoaderBase:The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-01-09 02:02:58,605 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 27744 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
+2023-01-09 02:02:58,614 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
+2023-01-09 02:02:58,669 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 02:02:58,670 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 02:02:59,756 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-09 02:02:59,903 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
+2023-01-09 02:03:00,621 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2023-01-09 02:03:00,629 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-01-09 02:03:00,630 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-09 02:03:00,687 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-01-09 02:03:00,690 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 2020 ms
+2023-01-09 02:03:00,963 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-09 02:03:00,994 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-09 02:03:01,112 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-09 02:03:01,172 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-01-09 02:03:01,315 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-01-09 02:03:01,331 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-09 02:03:02,192 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-09 02:03:02,201 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-09 02:03:02,994 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4869fb93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@100dbb30, org.springframework.security.web.context.SecurityContextPersistenceFilter@6acc835c, org.springframework.security.web.header.HeaderWriterFilter@21b9cd4f, org.springframework.security.web.authentication.logout.LogoutFilter@69983ca1, com.visionrent.security.jwt.AuthTokenFilter@661404f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3cf9b4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60d5fde7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34e957ba, org.springframework.security.web.session.SessionManagementFilter@627c8a33, org.springframework.security.web.access.ExceptionTranslationFilter@5062b2a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69d62d5b]
+2023-01-09 02:03:03,057 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-09 02:03:03,633 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-01-09 02:03:03,638 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-01-09 02:03:03,736 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-09 02:03:03,758 INFO  [restartedMain] com.visionrent.VisionrentApplication:Started VisionrentApplication in 5.697 seconds (JVM running for 6.732)
+2023-01-09 02:03:05,228 INFO  [RMI TCP Connection(3)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 02:12:25,361 INFO  [RMI TCP Connection(14)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
+2023-01-09 02:12:25,369 INFO  [RMI TCP Connection(14)-127.0.0.1] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
+2023-01-09 02:12:25,373 INFO  [RMI TCP Connection(14)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-09 02:12:25,379 WARN  [RMI TCP Connection(14)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase:The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@11.0.15/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@11.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
  java.base@11.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
@@ -29,309 +37,39 @@
  java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
  java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
  java.base@11.0.15/java.lang.Thread.run(Thread.java:834)
-2023-01-01 10:19:18,050 WARN  [restartedMain] org.apache.catalina.loader.WebappClassLoaderBase:The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.15/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@11.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
- java.base@11.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
- java.base@11.0.15/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
- java.base@11.0.15/java.lang.Thread.run(Thread.java:834)
-2023-01-01 10:19:18,051 WARN  [restartedMain] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2023-01-01 10:19:18,051 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:19:18,055 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-2023-01-01 10:19:18,062 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-2023-01-01 10:19:18,079 INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-01-01 10:19:18,099 ERROR [restartedMain] org.springframework.boot.SpringApplication:Application run failed
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.visionrent.VisionrentApplication.main(VisionrentApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/Users/g/Desktop/Projects/visionrent/target/classes/com/visionrent/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.visionrent.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5220)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	... 18 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/Users/g/Desktop/Projects/visionrent/target/classes/com/visionrent/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.visionrent.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
-	... 69 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [/Users/g/Desktop/Projects/visionrent/target/classes/com/visionrent/service/UserService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.visionrent.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
-	... 83 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.visionrent.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 96 common frames omitted
-Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String); Reason: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:107)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:95)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:97)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:87)
-	at java.base/java.util.Optional.map(Optional.java:265)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:87)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:365)
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231)
-	at org.springframework.data.util.Lazy.get(Lazy.java:115)
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 107 common frames omitted
-Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract void com.visionrent.repository.UserRepository.update(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) but parameter 'Optional[id]' not found in annotated query 'UPDATE User u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber, u.address = :address, u.postCode = :postCode WHERE u.id = id'!
-	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
-	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
-	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:93)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:103)
-	... 129 common frames omitted
-2023-01-01 10:24:04,653 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 6024 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
-2023-01-01 10:24:04,658 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
-2023-01-01 10:24:04,711 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-01 10:24:04,712 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-01 10:24:05,804 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-01 10:24:05,933 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 123 ms. Found 3 JPA repository interfaces.
-2023-01-01 10:24:06,601 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-2023-01-01 10:24:06,609 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-2023-01-01 10:24:06,609 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-01 10:24:06,661 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-2023-01-01 10:24:06,661 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1948 ms
-2023-01-01 10:24:06,934 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-01 10:24:06,960 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-01-01 10:24:07,062 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-01 10:24:07,125 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-2023-01-01 10:24:07,240 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-2023-01-01 10:24:07,257 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-01 10:24:07,952 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-01-01 10:24:07,959 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:24:08,636 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cf505a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@543db7cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@55015d07, org.springframework.security.web.header.HeaderWriterFilter@7547b0af, org.springframework.security.web.authentication.logout.LogoutFilter@58254f11, com.visionrent.security.jwt.AuthTokenFilter@6bf5096e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@253a864, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47af3677, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dfacebd, org.springframework.security.web.session.SessionManagementFilter@4a90ce9a, org.springframework.security.web.access.ExceptionTranslationFilter@50e70b02, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@438d6da6]
-2023-01-01 10:24:08,687 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-01-01 10:24:09,292 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-2023-01-01 10:24:09,300 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 15 endpoint(s) beneath base path '/actuator'
-2023-01-01 10:24:09,371 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-01 10:24:09,389 INFO  [restartedMain] com.visionrent.VisionrentApplication:Started VisionrentApplication in 5.28 seconds (JVM running for 6.239)
-2023-01-01 10:24:10,653 INFO  [RMI TCP Connection(9)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-01 10:24:21,885 ERROR [http-nio-8080-exec-1] com.visionrent.security.jwt.JwtUtils:JWT Token Validation Error:JWT expired at 2022-12-31T20:21:00Z. Current time: 2023-01-01T10:24:21Z, a difference of 50601884 milliseconds.  Allowed clock skew: 0 milliseconds.
-2023-01-01 10:25:17,864 ERROR [http-nio-8080-exec-3] com.visionrent.security.jwt.JwtUtils:JWT Token Validation Error:JWT expired at 2022-12-31T20:21:00Z. Current time: 2023-01-01T10:25:17Z, a difference of 50657862 milliseconds.  Allowed clock skew: 0 milliseconds.
-2023-01-01 10:25:46,141 ERROR [http-nio-8080-exec-4] com.visionrent.exception.VisionRentExceptionHandler:Bad credentials
-2023-01-01 10:25:46,162 WARN  [http-nio-8080-exec-4] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2023-01-01 10:26:01,839 ERROR [http-nio-8080-exec-5] com.visionrent.exception.VisionRentExceptionHandler:Bad credentials
-2023-01-01 10:26:01,842 WARN  [http-nio-8080-exec-5] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
-2023-01-01 10:26:08,201 ERROR [http-nio-8080-exec-8] com.visionrent.security.jwt.JwtUtils:JWT Token Validation Error:JWT expired at 2022-12-31T20:21:00Z. Current time: 2023-01-01T10:26:08Z, a difference of 50708200 milliseconds.  Allowed clock skew: 0 milliseconds.
-2023-01-01 10:27:59,010 ERROR [http-nio-8080-exec-3] com.visionrent.exception.VisionRentExceptionHandler:Required request body is missing: public org.springframework.http.ResponseEntity<com.visionrent.dto.response.VRResponse> com.visionrent.controller.UserController.updateUser(com.visionrent.dto.request.UserUpdateRequest)
-2023-01-01 10:27:59,012 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.visionrent.dto.response.VRResponse> com.visionrent.controller.UserController.updateUser(com.visionrent.dto.request.UserUpdateRequest)]
-2023-01-01 10:30:55,295 ERROR [http-nio-8080-exec-4] com.visionrent.exception.VisionRentExceptionHandler:JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
- at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 8, column: 6]
-2023-01-01 10:30:55,297 WARN  [http-nio-8080-exec-4] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 8, column: 6]]
-2023-01-01 10:31:16,279 ERROR [http-nio-8080-exec-7] com.visionrent.exception.VisionRentExceptionHandler:Please provide valid phone number
-2023-01-01 10:31:16,285 WARN  [http-nio-8080-exec-7] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.visionrent.dto.response.VRResponse> com.visionrent.controller.UserController.updateUser(com.visionrent.dto.request.UserUpdateRequest): [Field error in object 'userUpdateRequest' on field 'phoneNumber': rejected value [(541) 317-8858]; codes [Pattern.userUpdateRequest.phoneNumber,Pattern.phoneNumber,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequest.phoneNumber,phoneNumber]; arguments []; default message [phoneNumber],[Ljavax.validation.constraints.Pattern$Flag;@71354faf,^((\(\d{3}\))|\d{3})[-.]?\d{3}[-.]?\d{4}$]; default message [Please provide valid phone number]] ]
-2023-01-01 10:31:33,112 ERROR [http-nio-8080-exec-8] com.visionrent.exception.VisionRentExceptionHandler:Executing an update/delete query; nested exception is javax.persistence.TransactionRequiredException: Executing an update/delete query
-2023-01-01 10:31:33,113 WARN  [http-nio-8080-exec-8] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Executing an update/delete query; nested exception is javax.persistence.TransactionRequiredException: Executing an update/delete query]
-2023-01-01 10:32:05,456 INFO  [RMI TCP Connection(17)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
-2023-01-01 10:32:05,465 INFO  [RMI TCP Connection(17)-127.0.0.1] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
-2023-01-01 10:32:05,467 INFO  [RMI TCP Connection(17)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-01-01 10:32:05,475 WARN  [RMI TCP Connection(17)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase:The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.15/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@11.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
- java.base@11.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
- java.base@11.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base@11.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
- java.base@11.0.15/java.lang.Thread.run(Thread.java:834)
-2023-01-01 10:32:05,498 INFO  [RMI TCP Connection(17)-127.0.0.1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:32:05,503 INFO  [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-2023-01-01 10:32:05,511 INFO  [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-2023-01-01 10:33:11,306 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 6141 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
-2023-01-01 10:33:11,310 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
-2023-01-01 10:33:11,366 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-01 10:33:11,366 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-01 10:33:12,452 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-01 10:33:12,582 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
-2023-01-01 10:33:13,267 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-2023-01-01 10:33:13,275 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-2023-01-01 10:33:13,276 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-01 10:33:13,330 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-2023-01-01 10:33:13,331 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1963 ms
-2023-01-01 10:33:13,617 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-01 10:33:13,647 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-01-01 10:33:13,757 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-01 10:33:13,832 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-2023-01-01 10:33:13,961 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-2023-01-01 10:33:13,979 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-01 10:33:14,668 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-01-01 10:33:14,675 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:33:15,322 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17c78333, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ca0fd15, org.springframework.security.web.context.SecurityContextPersistenceFilter@4054f05, org.springframework.security.web.header.HeaderWriterFilter@3c2fa250, org.springframework.security.web.authentication.logout.LogoutFilter@3d725f44, com.visionrent.security.jwt.AuthTokenFilter@283ccf94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65cbda38, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35b14429, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@587f6bfd, org.springframework.security.web.session.SessionManagementFilter@3c18b454, org.springframework.security.web.access.ExceptionTranslationFilter@6642618c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a3c301e]
-2023-01-01 10:33:15,369 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-01-01 10:33:15,942 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-2023-01-01 10:33:15,948 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 15 endpoint(s) beneath base path '/actuator'
-2023-01-01 10:33:16,019 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-01 10:33:16,039 INFO  [restartedMain] com.visionrent.VisionrentApplication:Started VisionrentApplication in 5.302 seconds (JVM running for 6.25)
-2023-01-01 10:33:16,070 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:33:16,077 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-2023-01-01 10:33:16,086 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-2023-01-01 10:33:41,515 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 6156 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
-2023-01-01 10:33:41,522 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
-2023-01-01 10:33:41,577 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-01 10:33:41,577 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-01 10:33:42,654 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-01 10:33:42,779 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 119 ms. Found 3 JPA repository interfaces.
-2023-01-01 10:33:43,452 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-2023-01-01 10:33:43,460 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-2023-01-01 10:33:43,461 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-01 10:33:43,515 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-2023-01-01 10:33:43,515 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1938 ms
-2023-01-01 10:33:43,794 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-01-01 10:33:43,821 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-01-01 10:33:43,932 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-01-01 10:33:43,990 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-2023-01-01 10:33:44,109 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-2023-01-01 10:33:44,125 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-01-01 10:33:44,819 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-01-01 10:33:44,827 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 10:33:45,506 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b24c2d9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c50c3d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2772b42, org.springframework.security.web.header.HeaderWriterFilter@68240c0e, org.springframework.security.web.authentication.logout.LogoutFilter@36f5ed97, com.visionrent.security.jwt.AuthTokenFilter@2ceaf832, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64b08d8b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1791c050, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37f6409e, org.springframework.security.web.session.SessionManagementFilter@e0a1fe7, org.springframework.security.web.access.ExceptionTranslationFilter@7f5db62c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35f85f6b]
-2023-01-01 10:33:45,557 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-01-01 10:33:46,158 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-2023-01-01 10:33:46,164 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 15 endpoint(s) beneath base path '/actuator'
-2023-01-01 10:33:46,238 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-01 10:33:46,257 INFO  [restartedMain] com.visionrent.VisionrentApplication:Started VisionrentApplication in 5.279 seconds (JVM running for 6.099)
-2023-01-01 10:33:47,252 INFO  [RMI TCP Connection(9)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-01 10:39:02,777 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m48s534ms).
-2023-01-01 10:51:09,353 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m36s539ms).
-2023-01-01 10:55:59,452 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m50s100ms).
-2023-01-01 11:03:06,980 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m7s496ms).
-2023-01-01 11:03:14,815 INFO  [RMI TCP Connection(24)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:Application shutdown requested.
-2023-01-01 11:03:14,822 INFO  [RMI TCP Connection(24)-127.0.0.1] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
-2023-01-01 11:03:14,826 INFO  [RMI TCP Connection(24)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-01-01 11:03:14,832 WARN  [RMI TCP Connection(24)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase:The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.15/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@11.0.15/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
- java.base@11.0.15/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
- java.base@11.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base@11.0.15/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
- java.base@11.0.15/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
- java.base@11.0.15/java.lang.Thread.run(Thread.java:834)
-2023-01-01 11:03:14,848 INFO  [RMI TCP Connection(24)-127.0.0.1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-01 11:03:14,853 INFO  [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-2023-01-01 11:03:14,861 INFO  [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-01-09 02:12:25,398 INFO  [RMI TCP Connection(14)-127.0.0.1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-09 02:12:25,404 INFO  [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-01-09 02:12:25,418 INFO  [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-01-09 02:12:49,385 INFO  [restartedMain] com.visionrent.VisionrentApplication:Starting VisionrentApplication using Java 11.0.15 on Gulbahars-MacBook-Pro.local with PID 28766 (/Users/g/Desktop/Projects/visionrent/target/classes started by g in /Users/g/Desktop/Projects/visionrent)
+2023-01-09 02:12:49,391 INFO  [restartedMain] com.visionrent.VisionrentApplication:No active profile set, falling back to 1 default profile: "default"
+2023-01-09 02:12:49,446 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-09 02:12:49,446 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-09 02:12:50,551 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-09 02:12:50,694 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 136 ms. Found 5 JPA repository interfaces.
+2023-01-09 02:12:51,351 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+2023-01-09 02:12:51,360 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-01-09 02:12:51,360 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-09 02:12:51,413 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-01-09 02:12:51,414 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1968 ms
+2023-01-09 02:12:51,675 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-09 02:12:51,701 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-09 02:12:51,806 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-09 02:12:51,862 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-01-09 02:12:51,977 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-01-09 02:12:51,993 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-09 02:12:52,814 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-09 02:12:52,821 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-09 02:12:53,601 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17f1d303, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@619bbab6, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ddb6082, org.springframework.security.web.header.HeaderWriterFilter@7ea0b60f, org.springframework.security.web.authentication.logout.LogoutFilter@c537892, com.visionrent.security.jwt.AuthTokenFilter@46400022, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@749e65c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1bc5f84d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b5a3ac4, org.springframework.security.web.session.SessionManagementFilter@42e5584b, org.springframework.security.web.access.ExceptionTranslationFilter@2eee3625, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7aa187ac]
+2023-01-09 02:12:53,659 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-09 02:12:54,222 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-01-09 02:12:54,228 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-01-09 02:12:54,324 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-09 02:12:54,345 INFO  [restartedMain] com.visionrent.VisionrentApplication:Started VisionrentApplication in 5.5 seconds (JVM running for 6.471)
+2023-01-09 02:12:55,456 INFO  [RMI TCP Connection(3)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-09 02:19:31,481 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type int is not present]
+2023-01-09 02:20:55,264 WARN  [http-nio-8080-exec-4] org.hibernate.hql.internal.ast.QueryTranslatorImpl:HHH000104: firstResult/maxResults specified with collection fetch; applying in memory!
+2023-01-09 02:21:32,320 ERROR [http-nio-8080-exec-5] com.visionrent.exception.VisionRentExceptionHandler:Conversion = 'i'
+2023-01-09 02:21:32,332 WARN  [http-nio-8080-exec-5] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [java.util.UnknownFormatConversionException: Conversion = 'i']
+2023-01-09 02:25:07,865 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'imageId' for method parameter type String is not present]
+2023-01-09 02:28:48,894 ERROR [http-nio-8080-exec-7] com.visionrent.security.jwt.JwtUtils:JWT Token Validation Error:JWT expired at 2023-01-03T17:15:03Z. Current time: 2023-01-09T02:28:48Z, a difference of 465225892 milliseconds.  Allowed clock skew: 0 milliseconds.
+2023-01-09 02:31:46,163 ERROR [http-nio-8080-exec-1] com.visionrent.security.jwt.JwtUtils:JWT Token Validation Error:JWT expired at 2023-01-03T17:15:03Z. Current time: 2023-01-09T02:31:46Z, a difference of 465403162 milliseconds.  Allowed clock skew: 0 milliseconds.

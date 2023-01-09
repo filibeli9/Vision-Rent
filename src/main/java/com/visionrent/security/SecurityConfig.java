@@ -40,7 +40,8 @@ public class SecurityConfig {
 						 "/css/*",
 						 "/images/*",
 						 "/files/download/**",
-						 "/files/display/**").permitAll().
+						 "/files/display/**",
+						 "/car/visitors/**").permitAll().
 				anyRequest().authenticated();
 
 		http.addFilterBefore(authTokenFilter(), UsernamePasswordAuthenticationFilter.class);

@@ -14,5 +14,9 @@ public class ResponseMessage {
 	
 	public final static String IMAGE_SAVED_RESPONSE = "Image file successfully uploaded";
 	public final static String IMAGE_DELETE_RESPONSE = "Image successfully deleted";
+	
+	public final static String CAR_SAVED_RESPONSE = "Car successfully uploaded";
+	public final static String CAR_UPDATED_RESPONSE = "Car successfully updated";
+	public final static String CAR_DELETE_RESPONSE = "Car successfully deleted";
 
 }
