@@ -31,6 +31,9 @@ public class CarService {
 	
 	@Autowired
 	private ImageFileService imageFileService;
+	
+	@Autowired
+	private ReservationService reservationService;
 
 	public void saveCar(String imageId, CarDTO carDTO) {
 		//Does image id exist in image repository?
@@ -113,14 +116,27 @@ public class CarService {
 		
 		carRepository.save(car);
 	}
-
+	
 	public void removeById(Long id) {
 		Car car= getCar(id);
 		if(car.getBuiltIn()) {
 			throw new BadRequestException(ErrorMessage.NOT_PERMITTED_METHOD_MESSAGE);
 		}
+		//reservation control
+		boolean exist= reservationService.existsByCar(car);
+		
+		if(exist) {
+			throw new BadRequestException(ErrorMessage.CAR_USED_BY_RESERVATION_MESSAGE);
+		}
+		
 		carRepository.delete(car);
 		
+	}
+
+	public Car getCarById(Long id) {
+		Car car= carRepository.findById(id).orElseThrow(()->
+		new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
+		return car;
 	}
 	
 }

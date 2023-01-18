@@ -39,15 +39,18 @@ public class UserService {
 	private PasswordEncoder passwordEncoder;
 
 	private UserMapper userMapper;
+	
+	private ReservationService reservationService;
 
 	@Autowired
 	public UserService(UserRepository userRepository, RoleService roleService, @Lazy PasswordEncoder passwordEncoder,
-			UserMapper userMapper) {
+			UserMapper userMapper, ReservationService reservationService) {
 		super();
 		this.userRepository = userRepository;
 		this.roleService = roleService;
 		this.passwordEncoder = passwordEncoder;
 		this.userMapper = userMapper;
+		this.reservationService = reservationService;
 	}
 
 	public User getUserByEmail(String email) {
@@ -240,6 +243,14 @@ public class UserService {
 		if (user.getBuiltIn()) {
 			throw new BadRequestException(ErrorMessage.NOT_PERMITTED_METHOD_MESSAGE);
 		}
+		
+		//reservation control
+		boolean exist= reservationService.existsByUser(user);
+				
+		if(exist) {
+		  throw new BadRequestException(ErrorMessage.USER_HAS_A_RESERVATION_MESSAGE);
+		}
+		
 		userRepository.deleteById(id);
 		
 	}
