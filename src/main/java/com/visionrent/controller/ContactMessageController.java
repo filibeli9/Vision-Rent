@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -61,6 +62,7 @@ public class ContactMessageController {
 
 	// to get all contact messages
 	@GetMapping
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<List<ContactMessageDTO>> getAllContactMessage() {
 		List<ContactMessage> contactMessagesList = contactMessageService.getAll();
 		// mapstruct
@@ -70,6 +72,7 @@ public class ContactMessageController {
 	// if data is too much it is best to make getAll method with paging
 
 	@GetMapping("/pages")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<Page<ContactMessageDTO>> getAllContactMessageWithPage(@RequestParam("page") int page,
 																				@RequestParam("size") int size, 
 																				@RequestParam("sort") String prop, // to sort by what
@@ -86,6 +89,7 @@ public class ContactMessageController {
 
 	// to get a specific ContactMessage
 	@GetMapping("/{id}")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<ContactMessageDTO> getMessageWithPath(@PathVariable("id") Long id) {
 		ContactMessage contactMessage = contactMessageService.getContactMessage(id);
 		ContactMessageDTO contactMessageDTO = contactMessageMapper.contactMessageToDTO(contactMessage);
@@ -95,6 +99,7 @@ public class ContactMessageController {
 
 	// getById with RequestParam
 	@GetMapping("/request")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<ContactMessageDTO> getMessageWithRequestParam(@RequestParam("id") Long id) {
 		ContactMessage contactMessage = contactMessageService.getContactMessage(id);
 		ContactMessageDTO contactMessageDTO = contactMessageMapper.contactMessageToDTO(contactMessage);
@@ -103,6 +108,7 @@ public class ContactMessageController {
 	}
 
 	@DeleteMapping("/{id}")
+	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<VRResponse> deleteContactMessage(@PathVariable Long id) {
 		contactMessageService.deleteContactMessage(id);
 		VRResponse response = new VRResponse(ResponseMessage.CONTACTMESSAGE_DELETE_RESPONSE, true);
@@ -111,7 +117,8 @@ public class ContactMessageController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<VRResponse> dupdateContactMessage(@PathVariable Long id,
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<VRResponse> updateContactMessage(@PathVariable Long id,
 			@Valid @RequestBody ContactMessageRequest contactMessageRequest) {
 		ContactMessage contactMessage = contactMessageMapper
 				.contactMessageRequestToContactMessage(contactMessageRequest);

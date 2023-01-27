@@ -138,5 +138,9 @@ public class CarService {
 		new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 		return car;
 	}
+
+	public List<Car> getAllCar() {
+		return carRepository.getAllBy();
+	}
 	
 }

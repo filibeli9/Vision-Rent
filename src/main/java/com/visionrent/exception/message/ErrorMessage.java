@@ -23,7 +23,7 @@ public class ErrorMessage {
 	public final static String CAR_USED_BY_RESERVATION_MESSAGE = "Car couldn't be deleted. Car is used by a reservation";
 	public final static String USER_HAS_A_RESERVATION_MESSAGE = "User has a reservation";
 
-	
+	public final static String EXCEL_REPORT_ERROR_MESSAGE = "Error occured while generating excel report";
 
 	
 

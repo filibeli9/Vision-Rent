@@ -208,5 +208,9 @@ public class ReservationService {
 	public boolean existsByUser(User user) {
 		return reservationRepository.existsByUser(user);
 	}
+
+	public List<Reservation> getAll() {
+		return reservationRepository.findAllBy();
+	}
 	
 }
